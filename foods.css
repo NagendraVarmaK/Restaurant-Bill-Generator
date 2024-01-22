@@ -1,0 +1,165 @@
+body{
+    background: linear-gradient(to right,rgb(202, 148, 12),rgb(30, 240, 44),rgb(202, 148, 12));
+}
+#header1{
+    display: flex;
+    gap: 34%;
+    font-size: large;
+    width: 95%;
+    margin: auto;
+    border-bottom: 2px solid black;
+}
+#header1 h2{
+    color: rgb(88, 13, 13);
+}
+#header1 img{
+    width: 5%;
+    height: 5%;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+nav{
+    width: 95%;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 1%;
+    border-bottom: 2px dashed black;
+}
+nav img{
+    width: 80%;
+    height: 100%;
+    margin-top: 0.5%;
+    margin-left: 10%;
+}
+#header2{
+    width: 95%;
+    margin: auto;
+    font-size: large;
+    text-align: center;
+    color: rgb(9, 84, 8);
+}
+section{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+section #food_items{
+    width: 75%;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+section summary{
+    margin: auto;
+    width: 25%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    background: linear-gradient(to right,rgb(27, 145, 172),rgb(71, 246, 255),rgb(27, 145, 172));
+}
+summary:hover{
+    cursor: pointer;
+}
+section #food_items #veg #veg_mc, #veg_c, #veg_s, #nonveg_mc, #nonveg_c, #nonveg_s{
+    padding-left: 2%;
+}
+section #food_items #veg #veg_mc summary, #veg_c summary, #veg_s summary, #nonveg_mc summary, #nonveg_c summary, #nonveg_s summary{
+    background: linear-gradient(to right,rgb(202, 148, 12),rgb(71, 246, 255),rgb(202, 148, 12));
+}
+section #veg #veg_mc #mc, #veg_c #c, #veg_s #s{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+    width: 90%;
+    margin: auto;
+}
+section #nonveg #nonveg_mc #nmc, #nonveg_c #nc, #nonveg_s #ns{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+    width: 90%;
+    margin: auto;
+}
+section #ice #ice_cream, #drinks #d{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+section #food_items p{
+    text-align: center;
+}
+section #food_items #ab{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+    justify-content: space-evenly;
+}
+section #food_items img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+section #food_items button{
+    color: rgb(0, 0, 0);
+    background-color: blueviolet;
+    height: 28px;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+section #food_items input{
+    width:80px;
+    height: 20px;
+    text-align: center;
+    padding-top: 3.5px;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+}
+.vl{
+    border-left: 2px solid black;
+}
+section #cart{
+    width: 25%;
+    text-align: center;
+}
+section #cart p{
+    font-weight: bold;
+    font-size: large;
+}
+section #cart button{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    background: rgb(237, 81, 29);
+    font-size: larger;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+footer{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+    justify-content: space-evenly;
+    background: black;
+    color: aliceblue;
+    margin-top: 1%;
+}
+footer .logo{
+    display:flex;
+    gap: 5%;
+}
+footer .logo img{
+    width: 60px;
+    height: 80%;
+    border-radius: 10px;
+    margin-top: 4%;
+}
+footer details{
+    margin-top: 1.5%;
+}

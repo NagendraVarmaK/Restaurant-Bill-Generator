@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="icon" href="images/logo.png"/>
+        <link rel="stylesheet" href="foods.css"/>
+        <script src="foods.js"></script>
+    </head>
+    <body>
+        <header id="header1">
+            <img src="images/logo.png">
+            <h2><u>KNV Restaurent</u></h2>
+        </header>
+        <nav>
+            <img src="images/food_pamplate_2.jpg"/>
+        </nav>
+        <script>
+            const fimg = [`food_pamplate_2.jpg`,`food_pamplate_1.jpg`];
+            let index=1;
+            setInterval(function(){
+                if(index == fimg.length)
+                    index=0;
+                document.querySelector("nav img").src=`images/${fimg[index]}`;
+                index++;
+            },5000);
+        </script>
+        <header id="header2">
+            <h2><u>Food Menu Items</u></h2>
+        </header>
+        <section>
+            <div id="food_items">
+                <details id="veg">
+                    <summary>VEG ITEMS</summary>
+                    <details id="veg_mc">
+                        <summary>MAIN COURSE</summary>
+                        <div id="mc">
+                            <div id="v_b">
+                                <img src="images/foods/veg_biryani.jpg"/>
+                                <p>VEG BIRYANI - 100Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="vbq" name="vbq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#vbq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="vb_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="p_b">
+                                <img src="images/foods/paneer_biryani.jpg"/>
+                                <p>PANEER BIRYANI - 120Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="pbq" name="pbq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#pbq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="pb_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="m_b">
+                                <img src="images/foods/mushroom_biryani.jpg"/>
+                                <p>MUSHROOM BIRYANI - 120Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="mbq" name="mbq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#mbq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="mb_a">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <details id="veg_c">
+                        <summary>CHINESE</summary>
+                        <div id="c">
+                            <div id="v_n">
+                                <img src="images/foods/veg_noodles.jpg"/>
+                                <p>VEG NOODLES - 80Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="vnq" name="vnq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#vnq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="vn_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="v_f">
+                                <img src="images/foods/veg_friedrice.jpg"/>
+                                <p>VEG FRIEDRICE - 80Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="vfq" name="vfq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#vfq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="vf_a">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <details id="veg_s">
+                        <summary>STATERS</summary>
+                        <div id="s">
+                            <div id="v_m">
+                                <img src="images/foods/veg_manchurian.jpg"/>
+                                <p>VEG MANCHURIAN - 60Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="vmq" name="vmq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#vmq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="vm_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="p_m">
+                                <img src="images/foods/paneer_manchurian.jpg"/>
+                                <p>PANEER MANCHURIAN - 80Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="pmq" name="pmq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#pmq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="pm_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="g_m">
+                                <img src="images/foods/gobi_manchurian.jpg"/>
+                                <p>GOBI MANCHURIAN - 60Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="gmq" name="gmq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#gmq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="gm_a">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </details>
+                <details id="nonveg">
+                    <summary>NON-VEG ITEMS</summary>
+                    <details id="nonveg_mc">
+                        <summary>MAIN COURSE</summary>
+                        <div id="nmc">
+                            <div id="c_b">
+                                <img src="images/foods/chicken_biryani.jpg"/>
+                                <p>CHICKEN BIRYANI - 150Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="cbq" name="cbq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#cbq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cb_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="pr_b">
+                                <img src="images/foods/prawn_biryani.jpg"/>
+                                <p>PRAWNS BIRYANI - 200Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="prbq" name="prbq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#prbq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="prb_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="mu_b">
+                                <img src="images/foods/mutton_biryani.jpg"/>
+                                <p>MUTTON BIRYANI - 200Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="mubq" name="mubq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#mubq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="mub_a">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <details id="nonveg_c">
+                        <summary>CHINESE</summary>
+                        <div id="nc">
+                            <div id="e_f">
+                                <img src="images/foods/egg_friedrice.jpg"/>
+                                <p>EGG FRIEDRICE - 100Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="efq" name="efq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#efq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="ef_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="c_f">
+                                <img src="images/foods/chicken_friedrice.jpg"/>
+                                <p>CHICKEN FRIEDRICE - 120Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="cfq" name="cfq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#cfq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cf_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="e_n">
+                                <img src="images/foods/egg_noodles.jpg"/>
+                                <p>EGG NOODLES - 100Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="enq" name="enq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#enq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="en_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="c_n">
+                                <img src="images/foods/chicken_noodles.jpg"/>
+                                <p>CHICKEN NOODLES - 120Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="cnq" name="cnq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#cnq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cn_a">ADD</button>
+                                </div>
+                            </div>
+                        </div><br>
+                    </details>
+                    <details id="nonveg_s">
+                        <summary>STATERS</summary>
+                        <div id="ns">
+                            <div id="c_m">
+                                <img src="images/foods/chicken_manchurian.jpg"/>
+                                <p>CHICKEN MANCHURIAN - 100Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="cmq" name="cmq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#cmq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cm_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="c_l">
+                                <img src="images/foods/chicken_lollipop.jpg"/>
+                                <p>CHICKEN LOLLIPOP - 150Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="clq" name="clq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#clq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cl_a">ADD</button>
+                                </div>
+                            </div>
+                            <div id="c_w">
+                                <img src="images/foods/chicken_wings.jpg"/>
+                                <p>CHICKEN WINGS - 120Rs</p>
+                                <div id="ab">
+                                    <input type="text" id="cwq" name="cwq" maxlength="1" placeholder="Enter qty"/>
+                                    <script>
+                                        document.querySelector("#cwq").onkeypress=function(ph) {
+                                            let ch=ph.which;
+                                            if(!(ch>=49&&ch<=57))
+                                                ph.preventDefault();
+                                        };
+                                    </script>
+                                    <button id="cw_a">ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </details>
+                <details id="ice">
+                    <summary>ICE CREAMS</summary>
+                    <div id="ice_cream">
+                        <div id="bc_i">
+                            <img src="images/foods/blackcurrant.jpg"/>
+                            <p>BLACKCURRANT - 60Rs</p>
+                            <div id="ab">
+                                <input type="text" id="bcq" name="bcq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#bcq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="bc_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="bs_i">
+                            <img src="images/foods/butterscotch.jpg"/>
+                            <p>BUTTERSCOTCH - 50Rs</p>
+                            <div id="ab">
+                                <input type="text" id="bsq" name="bsq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#bsq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="bs_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="c_i">
+                            <img src="images/foods/chocolate.jpg"/>
+                            <p>CHOCOLATE - 50Rs</p>
+                            <div id="ab">
+                                <input type="text" id="ciq" name="ciq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#ciq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="ci_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="sb_i">
+                            <img src="images/foods/strawberry.jpg"/>
+                            <p>STRAWBERRY - 50Rs</p>
+                            <div id="ab">
+                                <input type="text" id="sbq" name="sbq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#sbq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="sb_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="tf_i">
+                            <img src="images/foods/tutti_fruity.jpg"/>
+                            <p>TUTTI FRUITY - 60Rs</p>
+                            <div id="ab">
+                                <input type="text" id="tfq" name="tfq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#tfq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="tf_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="v_i">
+                            <img src="images/foods/vanilla.jpg"/>
+                            <p>VANILLA - 50Rs</p>
+                            <div id="ab">
+                                <input type="text" id="vq" name="vq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#vq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="v_a">ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                <details id="drinks">
+                    <summary>DRINKS</summary>
+                    <div id="d">
+                        <div id="c_ts">
+                            <img src="images/foods/chocolate_thickshake.jpg"/>
+                            <p>CHOCOLATE THICKSHAKE - 80Rs</p>
+                            <div id="ab">
+                                <input type="text" id="ctsq" name="ctsq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#ctsq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="cts_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="o_ts">
+                            <img src="images/foods/oreo_thickshake.jpg"/>
+                            <p>OREO THICKSHAKE - 100Rs</p>
+                            <div id="ab">
+                                <input type="text" id="otsq" name="otsq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#otsq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="ots_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="s_ts">
+                            <img src="images/foods/strawberry_thickshake.jpg"/>
+                            <p>STRAWBERRY THICKSHAKE - 80Rs</p>
+                            <div id="ab">
+                                <input type="text" id="stsq" name="stsq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#stsq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="sts_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="t_d">
+                            <img src="images/foods/thums_up.jpg"/>
+                            <p>THUMS UP - 20Rs</p>
+                            <div id="ab">
+                                <input type="text" id="tq" name="tq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#tq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="t_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="s_d">
+                            <img src="images/foods/sprite.jpg"/>
+                            <p>SPRITE - 20Rs</p>
+                            <div id="ab">
+                                <input type="text" id="spq" name="spq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#spq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="sp_a">ADD</button>
+                            </div>
+                        </div>
+                        <div id="l_d">
+                            <img src="images/foods/limca.jpg"/>
+                            <p>LIMCA - 20Rs</p>
+                            <div id="ab">
+                                <input type="text" id="lq" name="lq" maxlength="1" placeholder="Enter qty"/>
+                                <script>
+                                    document.querySelector("#lq").onkeypress=function(ph) {
+                                        let ch=ph.which;
+                                        if(!(ch>=49&&ch<=57))
+                                            ph.preventDefault();
+                                    };
+                                </script>
+                                <button id="l_a">ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <script>
+                const vb_pr=100, pb_pr=120, mb_pr=120, vn_pr=80, vf_pr=80, vm_pr=60, pm_pr=80, gm_pr=60;
+                const cb_pr=150, prb_pr=200, mub_pr=200, ef_pr=100,cf_pr=120, en_pr=100, cn_pr=120, cm_pr=100, cl_pr=150, cw_pr=120;
+                const bc_pr=60, bs_pr=50, ci_pr=50, sb_pr=50, tf_pr=60, v_pr=50;
+                const cts_pr=80, ots_pr=100, sts_pr=80, t_pr=20, sp_pr=20, l_pr=20;
+
+                const vb_pn="Veg Biryani", pb_pn="Panner Biryani", mb_pn="Mushroom Biryani", vn_pn="Veg Noodles", vf_pn="Veg FriedRice", vm_pn="Veg Manchurian", pm_pn="Paneer Manhurian", gm_pn="Gobi Manchurian";
+                const cb_pn="Chicken Biryani", prb_pn="Prawn Biryani", mub_pn="Mutton Biryani", ef_pn="Egg FriedRice",cf_pn="Chicken FriedRice", en_pn="Egg Noodles", cn_pn="Chicken Noodles", cm_pn="Chicken Munchurian", cl_pn="Chicken Lollipop", cw_pn="Chicken Wings";
+                const bc_pn="BlackCurrant IceCream", bs_pn="ButterScotch IceCream", ci_pn="Chocolate IceCream", sb_pn="StrawBerry IceCream", tf_pn="TuttyFruity IceCream", v_pn="Vanilla IceCream";
+                const cts_pn="Chocolate ThickShake", ots_pn="Oreo ThickShake", sts_pn="StrawBerry ThickShake", t_pn="Thumsup", sp_pn="Sprite", l_pn="Limca";
+
+                const itms=[];
+                let i=0;
+
+                document.querySelector("#vb_a").onclick=function(){
+			        let qt = document.querySelector("#vbq");
+			        const p = new Product(vb_pn, +qt.value, +vb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value=`Veg Biryani:${qt.value}Qty * ${vb_pr}Rs`;
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+		        document.querySelector("#pb_a").onclick=function(){
+			        let qt = document.querySelector("#pbq");
+			        const p = new Product(pb_pn, +qt.value, +pb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value=`Panner Biryani:${qt.value}Qty * ${pb_pr}`;
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+		        document.querySelector("#mb_a").onclick=function(){
+			        let qt = document.querySelector("#mbq");
+			        const p = new Product(mb_pn, +qt.value, +mb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value=`Mushroom Biryani:${qt.value}Qty * ${mb_pr}Rs`;
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#vn_a").onclick=function(){
+			        let qt = document.querySelector("#vnq");
+			        const p = new Product(vn_pn, +qt.value, +vn_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Veg Noodles:"+qt.value+"Qty * "+vn_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#vf_a").onclick=function(){
+			        let qt = document.querySelector("#vfq");
+			        const p = new Product(vf_pn, +qt.value, +vf_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Veg FriedRice:"+qt.value+"Qty * "+vf_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#vm_a").onclick=function(){
+			        let qt = document.querySelector("#vmq");
+			        const p = new Product(vm_pn, +qt.value, +vm_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Veg Manchurian:"+qt.value+"Qty * "+vm_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#pm_a").onclick=function(){
+			        let qt = document.querySelector("#pmq");
+			        const p = new Product(pm_pn, +qt.value, +pm_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Paneer Manchurian:"+qt.value+"Qty * "+pm_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#gm_a").onclick=function(){
+			        let qt = document.querySelector("#gmq");
+			        const p = new Product(gm_pn, +qt.value, +gm_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Gobi Manchurian:"+qt.value+"Qty * "+gm_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cb_a").onclick=function(){
+			        let qt = document.querySelector("#cbq");
+			        const p = new Product(cb_pn, +qt.value, +cb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken Biryani:"+qt.value+"Qty * "+cb_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#prb_a").onclick=function(){
+			        let qt = document.querySelector("#prbq");
+			        const p = new Product(prb_pn, +qt.value, +prb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Prawn Biryani:"+qt.value+"Qty * "+prb_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#mub_a").onclick=function(){
+			        let qt = document.querySelector("#mubq");
+			        const p = new Product(mub_pn, +qt.value, +mub_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Mutton Biryani:"+qt.value+"Qty * "+mub_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#ef_a").onclick=function(){
+			        let qt = document.querySelector("#efq");
+			        const p = new Product(ef_pn, +qt.value, +ef_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Egg FriedRice:"+qt.value+"Qty * "+ef_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cf_a").onclick=function(){
+			        let qt = document.querySelector("#cfq");
+			        const p = new Product(cf_pn, +qt.value, +cf_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken FriedRice:"+qt.value+"Qty * "+cf_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#en_a").onclick=function(){
+			        let qt = document.querySelector("#enq");
+			        const p = new Product(en_pn, +qt.value, +en_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Egg Noodles:"+qt.value+"Qty * "+en_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cn_a").onclick=function(){
+			        let qt = document.querySelector("#cnq");
+			        const p = new Product(cn_pn, +qt.value, +cn_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken Noodles:"+qt.value+"Qty * "+cn_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cm_a").onclick=function(){
+			        let qt = document.querySelector("#cmq");
+			        const p = new Product(cm_pn, +qt.value, +cm_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken Manchurian:"+qt.value+"Qty * "+cm_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cl_a").onclick=function(){
+			        let qt = document.querySelector("#clq");
+			        const p = new Product(cl_pn, +qt.value, +cl_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken Lollipop:"+qt.value+"Qty * "+cl_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cw_a").onclick=function(){
+			        let qt = document.querySelector("#cwq");
+			        const p = new Product(cw_pn, +qt.value, +cw_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chicken Wing:"+qt.value+"Qty * "+cw_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#bc_a").onclick=function(){
+			        let qt = document.querySelector("#bcq");
+			        const p = new Product(bc_pn, +qt.value, +bc_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="ButterCurrant IceCream:"+qt.value+"Qty * "+bc_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#bs_a").onclick=function(){
+			        let qt = document.querySelector("#bsq");
+			        const p = new Product(bs_pn, +qt.value, +bs_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="ButterScotch IceCream:"+qt.value+"Qty * "+bs_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#ci_a").onclick=function(){
+			        let qt = document.querySelector("#ciq");
+			        const p = new Product(ci_pn, +qt.value, +ci_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chocolate IceCream:"+qt.value+"Qty * "+ci_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#sb_a").onclick=function(){
+			        let qt = document.querySelector("#sbq");
+			        const p = new Product(sb_pn, +qt.value, +sb_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="StrawBerry IceCream:"+qt.value+"Qty * "+sb_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#tf_a").onclick=function(){
+			        let qt = document.querySelector("#tfq");
+			        const p = new Product(tf_pn, +qt.value, +tf_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="TuttiFruity IceCream:"+qt.value+"Qty * "+tf_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#v_a").onclick=function(){
+			        let qt = document.querySelector("#vq");
+			        const p = new Product(v_pn, +qt.value, +v_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Vannila IceCream:"+qt.value+"Qty * "+v_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#cts_a").onclick=function(){
+			        let qt = document.querySelector("#ctsq");
+			        const p = new Product(cts_pn, +qt.value, +cts_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Chocolate ThickShake:"+qt.value+"Qty * "+cts_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#ots_a").onclick=function(){
+			        let qt = document.querySelector("#otsq");
+			        const p = new Product(ots_pn, +qt.value, +ots_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Oreo ThickShake:"+qt.value+"Qty * "+ots_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#sts_a").onclick=function(){
+			        let qt = document.querySelector("#stsq");
+			        const p = new Product(sts_pn, +qt.value, +sts_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="StrawBerry ThickShake:"+qt.value+"Qty * "+sts_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#t_a").onclick=function(){
+			        let qt = document.querySelector("#tq");
+			        const p = new Product(t_pn, +qt.value, +t_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Thums Up:"+qt.value+"Qty * "+t_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#sp_a").onclick=function(){
+			        let qt = document.querySelector("#spq");
+			        const p = new Product(sp_pn, +qt.value, +sp_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Sprite:"+qt.value+"Qty * "+sp_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+                document.querySelector("#l_a").onclick=function(){
+			        let qt = document.querySelector("#lq");
+			        const p = new Product(l_pn, +qt.value, +l_pr);
+			        itms[i]=p;
+			        i++;
+                    const output=document.createElement("output");
+                    output.value="Limca:"+qt.value+"Qty * "+l_pr+"Rs";
+                    document.querySelector("#cart").appendChild(output);
+                    const br=document.createElement("br");
+                    document.querySelector("#cart").appendChild(br);
+		        };
+            </script>
+            <div class="vl"></div>
+            <div id="cart">
+                <p><u>CART DETAILS</u></p>
+                <button id="bill">Generate Bill</button><br><br><br>
+            </div>
+        </section>
+        <script>
+            document.querySelector("#bill").onclick = function(){
+			    let slno=1, pAmt, gst, billAmt=0, totalAmt;
+
+                document.write("<table border align='center'>");
+                document.write("<caption align='center'><b>TOTAL BILL<b></caption>")
+                document.write("<tr> <th>S.No</th> <th>Item Name</th> <th>Quantity</th> <th>Price</th> <th>Amount</th> </tr>");
+			    for(let p of itms){
+		        	pAmt = p.qty*p.unitPrice;
+		        	billAmt += pAmt;
+			        document.write(`<tr align='center'>
+                        <td>${slno}</td> <td>${p.name}</td> <td>${p.qty}</td> <td>${p.unitPrice}</td> <td>${pAmt}</td>
+                        </tr>`);
+				    slno++;
+			    }
+			    gst=billAmt*8/100;
+		        totalAmt=billAmt+gst;
+		        document.write(`<tr align='center'> <td colspan="4">GST Amount (8%)</td> <td>${gst}</td> </tr>`);
+		        document.write(`<tr align='center'> <td colspan="4">Total Amount</td> <td>${totalAmt}</td> </tr>`);
+			    document.write(`<br> <button onclick='window.print()'>Print Bill</button>`);
+		    };
+        </script>
+        <footer>
+            <div class="logo">
+                <img src="images/logo.png">
+                <h2>KNV_MALL</h2>
+            </div>
+            <details>
+                <summary>About Us</summary>
+                <ul>
+                    <li>it is the best shopping mall where you can enjoy movies and foods.</li>
+                    <li>Here, you can buy food and groceries items in online also.</li>
+                    <li>here, you can also book movies tickets in online.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Contact Us</summary>
+                <ul>
+                    <li>gmail: 334nagendra@gmail.com</li>
+                    <li>phone_no: 6303610669</li>
+                </ul>
+            </details>
+        </footer>
+    </body>
+</html>
